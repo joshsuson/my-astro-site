@@ -1,0 +1,41 @@
+h1 {
+  background-color: var(--background0);
+  width: max-content;
+  padding-inline: 1ch;
+}
+
+article {
+  position: relative;
+  --box-border-color: var(--background1);
+  #readTime {
+    position: absolute;
+    right: 3%;
+    background-color: var(--background0);
+    width: max-content;
+    padding-inline: 1ch;
+    color: var(--sapphire);
+  }
+  div {
+    padding-inline: 2ch;
+  }
+
+  h2 {
+    margin-top: 1ch;
+  }
+
+  p {
+    padding-inline: 1ch;
+    padding-block: 0.5lh;
+  }
+
+  ol,
+  ul {
+    padding-inline: 1ch;
+    list-style-position: outside;
+    padding-left: 4ch;
+  }
+
+  li {
+    padding-bottom: 0.5lh;
+  }
+}

@@ -1,16 +1,107 @@
 ---
-
+import Header from "@/components/Header.astro";
+import Layout from "@/components/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<script>
+  import isUserTyping from "@/utils/isUserTyping";
+
+  window.addEventListener("keydown", (e) => {
+    if (isUserTyping()) return;
+
+    if (e.key === "a" || e.key === "A") {
+      window.location.href = "/about";
+    }
+    if (e.key === "b" || e.key === "B") {
+      window.location.href = "/blog";
+    }
+    if (e.key === "p" || e.key === "P") {
+      window.location.href = "/poetry";
+    }
+  });
+</script>
+
+<Layout>
+  <div id="section">
+    <div id="container">
+      <Header />
+      <h1>Coding is just another way I leave something good behind</h1>
+      <p>
+        I try to build software and create content like it might outlive me. It
+        should be built to serve people, shaped so that it lasts, and be worth
+        leaving behind
+      </p>
+      <div box-="square contain:!top" id="actions">
+        <h2>Do Something</h2>
+        <div id="inner-actions">
+          <a class="action-link" tabindex="0" href="/about">
+            <code>A</code>
+            <span> Find out more about me </span>
+          </a>
+          <a class="action-link" tabindex="0" href="/about">
+            <code>B</code>
+            <span> Read my blog </span>
+          </a>
+          <a class="action-link" tabindex="0" href="/about">
+            <code>P</code>
+            <span> Read my poetry </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  #section {
+    background-color: var(--crust);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 12ch;
+  }
+  #container {
+    background-color: var(--background0);
+    padding-inline: 2ch;
+    padding-block: 1lh;
+  }
+  #actions {
+    --box-border-color: var(--background1);
+  }
+
+  #inner-actions {
+    padding: 2ch;
+  }
+  h1 {
+    margin-bottom: 1lh;
+  }
+
+  h2 {
+    background-color: var(--background0);
+    width: max-content;
+    padding-inline: 1ch;
+  }
+
+  p {
+    margin-bottom: 1lh;
+  }
+
+  .action-link {
+    display: block;
+    color: var(--foreground1);
+    text-decoration: none;
+  }
+
+  .action-link span {
+    text-decoration: underline;
+  }
+
+  .action-link code {
+    text-decoration: none;
+    background-color: var(--background2);
+    padding: 1ch;
+    color: var(--red);
+  }
+</style>

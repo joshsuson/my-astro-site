@@ -1,0 +1,32 @@
+---
+
+---
+
+<button
+  id="theme-switcher-button"
+  @click="document.querySelector('#theme-switcher').showModal()"
+>
+  <code>T</code>
+  <span> Theme </span>
+</button>
+<dialog id="theme-switcher">
+  <h3>This is where you will change themes</h3>
+  <button @click="theme = 'catppuccin-latte'">Latte</button>
+  <button @click="theme = 'catppuccin'">Mocha</button>
+  <button @click="document.querySelector('#theme-switcher').close()"
+    >close</button
+  >
+</dialog>
+
+<style>
+  #theme-switcher-button {
+    position: absolute;
+    background-color: red;
+    bottom: 0;
+    left: 0;
+  }
+  dialog {
+    position: absolute;
+    background-color: blue;
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+
+---
+
+<header box-="square">
+  <a href="/" id="home-link">
+    <span
+      ><span class="brackets">&lbrace;</span> Josh Suson <span class="brackets"
+        >&rbrace;</span
+      ></span
+    >
+  </a>
+  <nav>
+    <a href="/about">
+      <span>&#xf4ff</span>
+      About
+    </a>
+    <a href="/blog">
+      <span>&#xf0219</span>
+      Blog
+    </a>
+    <a href="/poetry">
+      <span>&#xf044</span>
+      Poetry
+    </a>
+  </nav>
+</header>
+
+<style>
+  header {
+    --box-border-color: var(--background1);
+    padding-inline: 2ch;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1lh;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding-left: 1ch;
+  }
+  #home-link {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--foreground0);
+    display: block;
+  }
+  .brackets {
+    color: var(--green);
+  }
+</style>

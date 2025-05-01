@@ -1,0 +1,22 @@
+---
+import Layout from "./Layout.astro";
+import Header from "./Header.astro";
+import getReadTime from "@/utils/getReadTime";
+const { frontmatter } = Astro.props;
+
+const { minutes, seconds } = getReadTime(frontmatter.readTime);
+---
+
+<Layout title={frontmatter.title}>
+  <Header />
+  <article box-="square contain:!top">
+    <div id="readTime">{`${minutes}m${seconds}s`}</div>
+    <div id="content">
+      <slot />
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  @import "@/styles/blog.css";
+</style>

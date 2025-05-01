@@ -9,6 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/alpinejs": "^0.4.7",
+    "@types/alpinejs": "^3.13.11",
+    "@webtui/css": "^0.0.3",
+    "@webtui/plugin-nf": "^0.0.1",
+    "@webtui/theme-catppuccin": "^0.0.2",
+    "@webtui/theme-gruvbox": "^0.0.1",
+    "alpinejs": "^3.14.9",
     "astro": "^5.7.4"
   }
 }
